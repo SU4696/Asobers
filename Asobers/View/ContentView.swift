@@ -25,9 +25,6 @@ struct ContentView: View {
                
                 Text("Hello Hii")
                 
-                Text("HIIIIIIIII")
-                Text("HIIIIIIIII")
-                
             }
             
             
