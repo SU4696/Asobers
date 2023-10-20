@@ -23,7 +23,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                
-                Text("Hello")
+                Text("Hello Hii")
                 
             }
             
