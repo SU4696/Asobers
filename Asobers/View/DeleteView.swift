@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DeleteView: View {
     var body: some View {
-        Text("Hello test")
+        Text("Hello test number 2")
         
     }
 }
