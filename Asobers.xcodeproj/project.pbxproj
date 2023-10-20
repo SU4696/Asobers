@@ -95,7 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				BEEF7E582ADE911300E88D16 /* AsobersApp.swift */,
-				BEEF7E5A2ADE911300E88D16 /* ContentView.swift */,
+				BEEF7E942AE2819700E88D16 /* Data */,
+				BEEF7E932AE2819000E88D16 /* Model */,
+				BEEF7E922AE2818200E88D16 /* View */,
 				BEEF7E5C2ADE911400E88D16 /* Assets.xcassets */,
 				BEEF7E5E2ADE911400E88D16 /* Preview Content */,
 			);
@@ -125,6 +127,28 @@
 				BEEF7E752ADE911400E88D16 /* AsobersUITestsLaunchTests.swift */,
 			);
 			path = AsobersUITests;
+			sourceTree = "<group>";
+		};
+		BEEF7E922AE2818200E88D16 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BEEF7E5A2ADE911300E88D16 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BEEF7E932AE2819000E88D16 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BEEF7E942AE2819700E88D16 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
