@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ADD13B22AE2879900DABC32 /* DeleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD13B12AE2879900DABC32 /* DeleteView.swift */; };
 		BEEF7E592ADE911300E88D16 /* AsobersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF7E582ADE911300E88D16 /* AsobersApp.swift */; };
 		BEEF7E5B2ADE911300E88D16 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF7E5A2ADE911300E88D16 /* ContentView.swift */; };
 		BEEF7E5D2ADE911400E88D16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEEF7E5C2ADE911400E88D16 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0ADD13B12AE2879900DABC32 /* DeleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteView.swift; sourceTree = "<group>"; };
 		BEEF7E552ADE911300E88D16 /* Asobers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asobers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF7E582ADE911300E88D16 /* AsobersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsobersApp.swift; sourceTree = "<group>"; };
 		BEEF7E5A2ADE911300E88D16 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				BEEF7E5A2ADE911300E88D16 /* ContentView.swift */,
+				0ADD13B12AE2879900DABC32 /* DeleteView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ADD13B22AE2879900DABC32 /* DeleteView.swift in Sources */,
 				BEEF7E5B2ADE911300E88D16 /* ContentView.swift in Sources */,
 				BEEF7E592ADE911300E88D16 /* AsobersApp.swift in Sources */,
 			);
