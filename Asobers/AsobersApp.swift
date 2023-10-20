@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct AsobersApp: App {
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
     }
+}
+#Preview {
+    ContentView()
 }

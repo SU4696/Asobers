@@ -34,7 +34,7 @@ struct ContentView: View {
                     
                     Image(systemName:"calendar")
                         .bold()
-                        .foregroundColor(.pink)
+                        
                     
                 }
                 ,
@@ -42,7 +42,7 @@ struct ContentView: View {
                     
                     Image(systemName:"plus")
                         .bold()
-                        .foregroundColor(.pink)
+                        
                 }
             )
             
