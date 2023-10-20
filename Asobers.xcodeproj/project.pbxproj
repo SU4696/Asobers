@@ -15,6 +15,7 @@
 		BEEF7E6A2ADE911400E88D16 /* AsobersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF7E692ADE911400E88D16 /* AsobersTests.swift */; };
 		BEEF7E742ADE911400E88D16 /* AsobersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF7E732ADE911400E88D16 /* AsobersUITests.swift */; };
 		BEEF7E762ADE911400E88D16 /* AsobersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF7E752ADE911400E88D16 /* AsobersUITestsLaunchTests.swift */; };
+		BEEF7EA02AE28A2300E88D16 /* itemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF7E9F2AE28A2300E88D16 /* itemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		BEEF7E6F2ADE911400E88D16 /* AsobersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsobersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF7E732ADE911400E88D16 /* AsobersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsobersUITests.swift; sourceTree = "<group>"; };
 		BEEF7E752ADE911400E88D16 /* AsobersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsobersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BEEF7E9F2AE28A2300E88D16 /* itemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = itemModel.swift; path = Asobers/View/itemModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		BEEF7E942AE2819700E88D16 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				BEEF7E9F2AE28A2300E88D16 /* itemModel.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			files = (
 				0ADD13B22AE2879900DABC32 /* DeleteView.swift in Sources */,
 				BEEF7E5B2ADE911300E88D16 /* ContentView.swift in Sources */,
+				BEEF7EA02AE28A2300E88D16 /* itemModel.swift in Sources */,
 				BEEF7E592ADE911300E88D16 /* AsobersApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
