@@ -8,15 +8,15 @@
 import Foundation
 import SwiftUI
 
-struct Learner: Identifiable {
+struct Item: Identifiable {
     var id: UUID = UUID()
     var date: String
     var status: Bool
     var name: String
     var measurement: String
-    var amount: String
+    var amount: Int
     var reminderStatus: Bool
-    var frequency: Int
+    var frequency: String
     var progress: Int
     var goal: Int
     var favouriteColour: Color = .black
