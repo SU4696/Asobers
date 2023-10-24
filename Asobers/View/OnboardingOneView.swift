@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct OnboardingOneView: View {
+    @Binding var isFirstLaunching: Bool
+    
     @State private var isTitleVisible = false
     
     var body: some View {
@@ -23,6 +25,7 @@ struct OnboardingOneView: View {
             BoxView(icon:"🙅🏻", titletext:"Limits!", description: "Choose a bad activity and keep track of it to help yourself let it go step by step!")
             
             Button(action: {
+                isFirstLaunching.toggle()
                 // lead to next page
             }) {
                 Text("Continue")
@@ -78,6 +81,6 @@ struct BoxView: View {
     }
 }
 
-#Preview {
-    OnboardingOneView()
-}
+//#Preview {
+//    OnboardingOneView()
+//}

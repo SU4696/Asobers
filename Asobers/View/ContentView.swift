@@ -16,6 +16,8 @@ struct SecondView: View {
 }
 
 struct ContentView: View {
+    @AppStorage("_isFirstLaunching") var isFirstLaunching: Bool = true
+    
     
     var body: some View {
         
@@ -47,6 +49,8 @@ struct ContentView: View {
                 }
             )
             
+        } .fullScreenCover(isPresented: $isFirstLaunching) {
+            OnboardingOneView(isFirstLaunching: $isFirstLaunching)
         }
     }
 
