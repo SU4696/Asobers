@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct PopOverTestView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    @State private var show = false
+       @State private var selectedColor: Color = .red
+       @State private var selectedIcon:String = ""
+       @State private var isColorPopoverPresented: Bool = false
+       
+       var body: some View {
+           
+           Button(action:{isColorPopoverPresented.toggle()}) {
+               Text("aaa")
+               
+           }
+           .popover(isPresented: $isColorPopoverPresented, content: {
+               ColorIconSelectorModelView(selectedColor: $selectedColor, selectedIcon: $selectedIcon)
+                   .frame(minWidth: 300, maxHeight: 450)
+                   .presentationCompactAdaptation(.none)
+                   .padding(.vertical,10)
+                   
+           })
+           
+       }
+   }
 
-#Preview {
-    PopOverTestView()
-}
+
+   #Preview {
+       PopOverTestView()
+   }

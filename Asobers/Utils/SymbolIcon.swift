@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct SymbolIcon: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    let icon: String
+        @Binding var selection: String
+        
+        var body: some View {
+            Image(systemName: icon)
+                .font(.system(size: 25))
+                .foregroundColor(self.selection == icon ? Color.accentColor : Color.primary)
+                .onTapGesture {
+                    
+                    // Assign binding value
+                    withAnimation {
+                        self.selection = icon
+                    }
+                }
+        }
+        
     }
-}
 
-#Preview {
-    SymbolIcon()
-}
+    #Preview {
+        SymbolIcon(icon: "beats.powerbeatspro", selection: .constant("star.bubble"))
+    }
