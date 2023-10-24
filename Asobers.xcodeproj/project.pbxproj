@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0ADD13B22AE2879900DABC32 /* DeleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD13B12AE2879900DABC32 /* DeleteView.swift */; };
 		60DDC87C2AE67B4900D26C3F /* OnboardingOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DDC87B2AE67B4900D26C3F /* OnboardingOneView.swift */; };
+		BE49BE7D2AE7B9F800E95A17 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BE7C2AE7B9F800E95A17 /* Constants.swift */; };
+		BE49BE7F2AE7BA1000E95A17 /* SymbolIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BE7E2AE7BA1000E95A17 /* SymbolIcon.swift */; };
+		BE49BE812AE7BA1A00E95A17 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BE802AE7BA1A00E95A17 /* SearchBar.swift */; };
+		BE49BE842AE7BA4600E95A17 /* ColorIconSelectorModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BE832AE7BA4600E95A17 /* ColorIconSelectorModelView.swift */; };
+		BE49BE862AE7BA5F00E95A17 /* PopOverTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BE852AE7BA5F00E95A17 /* PopOverTestView.swift */; };
 		BEEF7E592ADE911300E88D16 /* AsobersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF7E582ADE911300E88D16 /* AsobersApp.swift */; };
 		BEEF7E5B2ADE911300E88D16 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF7E5A2ADE911300E88D16 /* ContentView.swift */; };
 		BEEF7E5D2ADE911400E88D16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEEF7E5C2ADE911400E88D16 /* Assets.xcassets */; };
@@ -38,8 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0ADD13B12AE2879900DABC32 /* DeleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteView.swift; sourceTree = "<group>"; };
 		60DDC87B2AE67B4900D26C3F /* OnboardingOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingOneView.swift; sourceTree = "<group>"; };
+		BE49BE7C2AE7B9F800E95A17 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BE49BE7E2AE7BA1000E95A17 /* SymbolIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolIcon.swift; sourceTree = "<group>"; };
+		BE49BE802AE7BA1A00E95A17 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		BE49BE832AE7BA4600E95A17 /* ColorIconSelectorModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorIconSelectorModelView.swift; sourceTree = "<group>"; };
+		BE49BE852AE7BA5F00E95A17 /* PopOverTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverTestView.swift; sourceTree = "<group>"; };
 		BEEF7E552ADE911300E88D16 /* Asobers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asobers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF7E582ADE911300E88D16 /* AsobersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsobersApp.swift; sourceTree = "<group>"; };
 		BEEF7E5A2ADE911300E88D16 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +87,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE49BE7B2AE7B9DC00E95A17 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BE49BE7C2AE7B9F800E95A17 /* Constants.swift */,
+				BE49BE7E2AE7BA1000E95A17 /* SymbolIcon.swift */,
+				BE49BE802AE7BA1A00E95A17 /* SearchBar.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BE49BE822AE7BA3300E95A17 /* Color Icon  */ = {
+			isa = PBXGroup;
+			children = (
+				BE49BE832AE7BA4600E95A17 /* ColorIconSelectorModelView.swift */,
+			);
+			path = "Color Icon ";
+			sourceTree = "<group>";
+		};
 		BEEF7E4C2ADE911300E88D16 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				BEEF7E582ADE911300E88D16 /* AsobersApp.swift */,
+				BE49BE7B2AE7B9DC00E95A17 /* Utils */,
 				BEEF7E942AE2819700E88D16 /* Data */,
 				BEEF7E932AE2819000E88D16 /* Model */,
 				BEEF7E922AE2818200E88D16 /* View */,
@@ -140,9 +167,10 @@
 		BEEF7E922AE2818200E88D16 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BE49BE822AE7BA3300E95A17 /* Color Icon  */,
 				BEEF7E5A2ADE911300E88D16 /* ContentView.swift */,
-				0ADD13B12AE2879900DABC32 /* DeleteView.swift */,
 				60DDC87B2AE67B4900D26C3F /* OnboardingOneView.swift */,
+				BE49BE852AE7BA5F00E95A17 /* PopOverTestView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -293,12 +321,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ADD13B22AE2879900DABC32 /* DeleteView.swift in Sources */,
 				60DDC87C2AE67B4900D26C3F /* OnboardingOneView.swift in Sources */,
 				BEEF7E5B2ADE911300E88D16 /* ContentView.swift in Sources */,
+				BE49BE7F2AE7BA1000E95A17 /* SymbolIcon.swift in Sources */,
 				BEEF7EA22AE5C5B700E88D16 /* itemDataModel.swift in Sources */,
+				BE49BE842AE7BA4600E95A17 /* ColorIconSelectorModelView.swift in Sources */,
 				BEEF7EA42AE5C73B00E88D16 /* itemModel.swift in Sources */,
+				BE49BE812AE7BA1A00E95A17 /* SearchBar.swift in Sources */,
 				BEEF7E592ADE911300E88D16 /* AsobersApp.swift in Sources */,
+				BE49BE862AE7BA5F00E95A17 /* PopOverTestView.swift in Sources */,
+				BE49BE7D2AE7B9F800E95A17 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
