@@ -13,10 +13,11 @@ struct AsobersApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(vm:ContentViewModel())
+                
         }
     }
 }
 #Preview {
-    ContentView()
+    ContentView(vm:ContentViewModel())
 }
