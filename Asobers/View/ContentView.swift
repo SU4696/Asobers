@@ -19,6 +19,8 @@ struct ContentView: View {
     @AppStorage("_isFirstLaunching") var isFirstLaunching: Bool = true
     @StateObject private var vm: ContentViewModel
     @State private var isPresented: Bool = false
+    @State private var showingActionSheet = false
+    
     
     init(vm: ContentViewModel) {
         _vm = StateObject(wrappedValue: vm)
@@ -65,30 +67,44 @@ struct ContentView: View {
                     
                 }
                 ,
-                trailing: NavigationLink(destination:  SecondView()){
-                    
-                    Image(systemName:"plus")
+                trailing: Button(action: {
+                    showingActionSheet = true
+                }) {
+                    Image(systemName: "plus")
                         .bold()
-                    
                 }
-            )
-            
-        } .fullScreenCover(isPresented: $isFirstLaunching) {
-            OnboardingOneView(isFirstLaunching: $isFirstLaunching)
+                    .actionSheet(isPresented: $showingActionSheet) {
+                        ActionSheet(
+                            title: Text("Add"),
+                            buttons: [
+                                .default(Text("Goal")) {
+                                    // Action to perform when the user selects "Goal"
+                                },
+                                .default(Text("Limit")) {
+                                    // Action to perform when the user selects "Limit"
+                                },
+                                .cancel() {
+                                    // Action to perform when the user cancels the Action Sheet
+                                }
+                            ]
+                        )
+                    } .fullScreenCover(isPresented: $isFirstLaunching) {
+                        OnboardingOneView(isFirstLaunching: $isFirstLaunching)
+                    }
+            )}
+        
+        
+        
+    }
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            let vm = ContentViewModel()
+            ContentView(vm: vm)
         }
     }
-    
-    
-    
+    //#Preview {
+    //    let vm = ContentViewModel()
+    //    ContentView(vm: vm)
+    //}
 }
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        let vm = ContentViewModel()
-        ContentView(vm: vm)
-    }
-}
-//#Preview {
-//    let vm = ContentViewModel()
-//    ContentView(vm: vm)
-//}
