@@ -10,9 +10,32 @@ import SwiftUI
 struct ItemListView: View {
     let itemLists: [ItemListViewModel]
     var body: some View {
-        List(itemLists){
-            itemList in
-            Text(itemList.name)
+        List {
+            Section(header:
+                        Text("Goal")
+                .fontWeight(.bold)
+                .foregroundColor(Color.black)
+                    
+            ) {
+                ForEach(itemLists) { itemList in
+                    if itemList.data == "Goal" {
+                        Text(itemList.name)
+                    }
+                }
+                
+            }
+            Section(header:
+                        Text("Limits")
+                .fontWeight(.bold)
+                .foregroundColor(Color.black)
+            ) {
+                ForEach(itemLists) { itemList in
+                    if itemList.data == "Limit" {
+                        Text(itemList.name)
+                    }
+                }
+                
+            }
         }
     }
 }

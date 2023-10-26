@@ -96,15 +96,16 @@ struct ContentView: View {
         
         
     }
-    
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            let vm = ContentViewModel()
-            ContentView(vm: vm)
-        }
-    }
-    //#Preview {
-    //    let vm = ContentViewModel()
-    //    ContentView(vm: vm)
-    //}
 }
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        let vm = ContentViewModel()
+        ContentView(vm: vm)
+    }
+}
+//#Preview {
+//    let vm = ContentViewModel()
+//    ContentView(vm: vm)
+//}
+
