@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		60DDC87C2AE67B4900D26C3F /* OnboardingOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DDC87B2AE67B4900D26C3F /* OnboardingOneView.swift */; };
+		A4601DFF2AEA6C4A00923B53 /* OnboardingSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4601DFE2AEA6C4A00923B53 /* OnboardingSecondView.swift */; };
 		BE49BE7D2AE7B9F800E95A17 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BE7C2AE7B9F800E95A17 /* Constants.swift */; };
 		BE49BE7F2AE7BA1000E95A17 /* SymbolIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BE7E2AE7BA1000E95A17 /* SymbolIcon.swift */; };
 		BE49BE812AE7BA1A00E95A17 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BE802AE7BA1A00E95A17 /* SearchBar.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		60DDC87B2AE67B4900D26C3F /* OnboardingOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingOneView.swift; sourceTree = "<group>"; };
+		A4601DFE2AEA6C4A00923B53 /* OnboardingSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSecondView.swift; sourceTree = "<group>"; };
 		BE49BE7C2AE7B9F800E95A17 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BE49BE7E2AE7BA1000E95A17 /* SymbolIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolIcon.swift; sourceTree = "<group>"; };
 		BE49BE802AE7BA1A00E95A17 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				BE49BE852AE7BA5F00E95A17 /* PopOverTestView.swift */,
 				BE49BE872AE7CF4D00E95A17 /* NewGLView.swift */,
 				BE49BE9C2AE860CB00E95A17 /* ItemListView.swift */,
+				A4601DFE2AEA6C4A00923B53 /* OnboardingSecondView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				BEEF7EA22AE5C5B700E88D16 /* itemDataModel.swift in Sources */,
 				BE49BE882AE7CF4D00E95A17 /* NewGLView.swift in Sources */,
 				BE49BE842AE7BA4600E95A17 /* ColorIconSelectorModelView.swift in Sources */,
+				A4601DFF2AEA6C4A00923B53 /* OnboardingSecondView.swift in Sources */,
 				BEEF7EA42AE5C73B00E88D16 /* itemModel.swift in Sources */,
 				BE49BE812AE7BA1A00E95A17 /* SearchBar.swift in Sources */,
 				BEEF7E592ADE911300E88D16 /* AsobersApp.swift in Sources */,
