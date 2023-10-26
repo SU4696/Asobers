@@ -1,21 +1,18 @@
-//
-//  NewGLView.swift
-//  Asobers
-//
-//  Created by Suyeon Cho on 24/10/23.
-//
 import Foundation
 import SwiftUI
 
 struct NewGLView: View {
     
-    @State private var newItemData: String = "Goal" //default for now
-    @State private var newItemName: String = "Water" //default for now
-    @State private var newItemMeasurement: String = "" //dafault
+    @State private var newItemData: String = "" 
+    @State private var newItemName: String = ""
+    @State private var newItemMeasurement: String = ""
     @State private var newItemAmount: Int64 = 1
     @State private var newItemGoal: Int64 = 10
     @State private var newReminderStatus: Bool = false
     @State private var newItemFrequency: Float = 1.0
+    @State private var isColorPopoverPresented: Bool = false
+    @State private var selectedColor: Color = .pink
+    @State private var selectedIcon:String = "list.dash"
     
     var onSave: (String, Bool,String, String, Int64, Bool, String, Int64,Int64) -> Void
     
@@ -29,14 +26,44 @@ struct NewGLView: View {
             }
             
             VStack {
-                Image("\(newItemName)")
+               
+                
+            /*    Button(action:{isColorPopoverPresented.toggle()}) {
+                    Text("Icon")
+                    
+                }
+                .popover(isPresented: $isColorPopoverPresented, content: {
+                    ColorIconSelectorModelView(selectedColor: $selectedColor, selectedIcon: $selectedIcon)
+                        .frame(minWidth: 300, maxHeight: 450)
+                        .presentationCompactAdaptation(.none)
+                       // .padding(.vertical,10)
+                        
+                })*/
+                
+            
+                Image(systemName: "\(selectedIcon)")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 132.0, height: 132.0)
+                    .frame(width: 100, height: 100)
+                    .foregroundColor(selectedColor)
+                    .onTapGesture {
+                        isColorPopoverPresented.toggle()
+                    }
+                    .popover(isPresented: $isColorPopoverPresented, content: {
+                        ColorIconSelectorModelView(selectedColor: $selectedColor, selectedIcon: $selectedIcon)
+                            .frame(minWidth: 300, maxHeight: 450)
+                            .presentationCompactAdaptation(.none)
+                            .padding(10)
+                    })
                 
-                Text("\(newItemName)")
+              
+                     
+                TextField("Name", value: $newItemName, formatter: DateFormatter())
                     .font(.system(size: 27))
                     .bold()
+                    .multilineTextAlignment(.center)
+                    
+                    
                 
                 if(newItemMeasurement==""){
                     Text(" Day")
@@ -55,7 +82,7 @@ struct NewGLView: View {
                 Button(action: {newItemGoal += -newItemAmount}) {
                     Image(systemName: "minus.circle.fill")
                         .font(.largeTitle)
-                        .foregroundColor(.blue)
+                        .foregroundColor(selectedColor)
                 }
                 
                 Text(verbatim:"\(newItemGoal)")
@@ -66,7 +93,7 @@ struct NewGLView: View {
                 Button(action: {newItemGoal += newItemAmount}) {
                     Image(systemName: "plus.circle.fill")
                         .font(.largeTitle)
-                        .foregroundColor(.blue)
+                        .foregroundColor(selectedColor)
                 }
                 
             }
@@ -119,4 +146,6 @@ struct NewGLView: View {
 //#Preview {
 //    NewGLView(onSave: <#(String, Bool, String, String, Int64, Bool, String, Int64, Int64) -> Void#>)
 //}
+
+
 
