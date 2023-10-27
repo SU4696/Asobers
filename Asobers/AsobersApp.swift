@@ -13,8 +13,8 @@ struct AsobersApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView(vm:ContentViewModel())
-//           OnboardingOneView()
+//            ContentView(vm:ContentViewModel())
+           OnboardingOneView()
                 
         }
     }

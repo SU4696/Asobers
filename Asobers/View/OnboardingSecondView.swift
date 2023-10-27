@@ -46,7 +46,7 @@ struct OnboardingSecondView: View {
                     Section("Limits"){
                         ForEach(viewModel.defaultItems) {
                             item in
-                            if item.data == "Goal"{
+                            if item.data == "Limit"{
                                 NavigationLink{
                                     DefaultGLView(defaultItems: item)
                                 } label: {

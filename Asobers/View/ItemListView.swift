@@ -115,6 +115,7 @@ struct ItemListView: View {
             ) {
                 ForEach(itemLists) { itemList in
                     if itemList.data == "Limit" {
+                        HStack {
                         NavigationLink {
                             DetailModelView(itemList: itemList)
                                 .navigationBarItems(trailing: Button(action: {}, label: {
@@ -125,23 +126,32 @@ struct ItemListView: View {
                                 Image(systemName: itemList.iconName)
                                     .imageScale(.medium)
                                     .foregroundColor(Color.colorFromHex(itemList.favouriteColour))
-                                Text(itemList.name)
+                             
+                                    Text(itemList.name)
+                                    
+                                Text("\(itemList.progress)/\(itemList.goal)  \(itemList.measurement)").foregroundColor(Color(.systemGray2))
+                               
+                                Spacer()
                                 Button(action: {
                                     update(itemList: itemList.item, progress: Int64(itemList.progress + itemList.amount))
                                     refreshID = UUID()
                                 }) {
                                     Text("+")
                                         .bold()
-                                        .font(.headline)
-                                        .padding(50)
+                                        .font(.title2)
+                                        .padding(10)
                                         .foregroundColor(.white)
                                         .background(Color.colorFromHex(itemList.favouriteColour))
                                         .clipShape(Circle())
                                         .shadow(radius: 10)
                                         .foregroundColor(.cyan)
-                                }.multilineTextAlignment(.trailing)
+                                }.buttonStyle(PlainButtonStyle())
                                 
-                            } .padding()
+                            }
+                            
+                        }
+                            
+                        
                         }
                     }
                 }
