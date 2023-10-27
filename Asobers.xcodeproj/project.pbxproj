@@ -20,6 +20,10 @@
 		BE49BE972AE84F2200E95A17 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BE962AE84F2200E95A17 /* CoreDataManager.swift */; };
 		BE49BE9B2AE8522400E95A17 /* ItemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BE9A2AE8522400E95A17 /* ItemExtensions.swift */; };
 		BE49BE9D2AE860CB00E95A17 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BE9C2AE860CB00E95A17 /* ItemListView.swift */; };
+		BE49BE9F2AEA905C00E95A17 /* DefaultGLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BE9E2AEA905C00E95A17 /* DefaultGLView.swift */; };
+		BE49BEA02AEAA24B00E95A17 /* NewGLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BE872AE7CF4D00E95A17 /* NewGLView.swift */; };
+		BE49BEA32AEB216A00E95A17 /* DetailModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BEA22AEB216A00E95A17 /* DetailModelView.swift */; };
+		BE49BEA52AEBBD8D00E95A17 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BEA42AEBBD8D00E95A17 /* ColorExtension.swift */; };
 		BEEF7E592ADE911300E88D16 /* AsobersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF7E582ADE911300E88D16 /* AsobersApp.swift */; };
 		BEEF7E5B2ADE911300E88D16 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF7E5A2ADE911300E88D16 /* ContentView.swift */; };
 		BEEF7E5D2ADE911400E88D16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEEF7E5C2ADE911400E88D16 /* Assets.xcassets */; };
@@ -62,6 +66,9 @@
 		BE49BE962AE84F2200E95A17 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BE49BE9A2AE8522400E95A17 /* ItemExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemExtensions.swift; sourceTree = "<group>"; };
 		BE49BE9C2AE860CB00E95A17 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
+		BE49BE9E2AEA905C00E95A17 /* DefaultGLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultGLView.swift; sourceTree = "<group>"; };
+		BE49BEA22AEB216A00E95A17 /* DetailModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModelView.swift; sourceTree = "<group>"; };
+		BE49BEA42AEBBD8D00E95A17 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		BEEF7E552ADE911300E88D16 /* Asobers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asobers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF7E582ADE911300E88D16 /* AsobersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsobersApp.swift; sourceTree = "<group>"; };
 		BEEF7E5A2ADE911300E88D16 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +114,7 @@
 				BE49BE7C2AE7B9F800E95A17 /* Constants.swift */,
 				BE49BE7E2AE7BA1000E95A17 /* SymbolIcon.swift */,
 				BE49BE802AE7BA1A00E95A17 /* SearchBar.swift */,
+				BE49BEA42AEBBD8D00E95A17 /* ColorExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -199,6 +207,8 @@
 				BE49BE872AE7CF4D00E95A17 /* NewGLView.swift */,
 				BE49BE9C2AE860CB00E95A17 /* ItemListView.swift */,
 				A4601DFE2AEA6C4A00923B53 /* OnboardingSecondView.swift */,
+				BE49BE9E2AEA905C00E95A17 /* DefaultGLView.swift */,
+				BE49BEA22AEB216A00E95A17 /* DetailModelView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,16 +367,19 @@
 				BEEF7E5B2ADE911300E88D16 /* ContentView.swift in Sources */,
 				BE49BE7F2AE7BA1000E95A17 /* SymbolIcon.swift in Sources */,
 				BEEF7EA22AE5C5B700E88D16 /* itemDataModel.swift in Sources */,
+				BE49BE9F2AEA905C00E95A17 /* DefaultGLView.swift in Sources */,
 				BE49BE882AE7CF4D00E95A17 /* NewGLView.swift in Sources */,
 				BE49BE842AE7BA4600E95A17 /* ColorIconSelectorModelView.swift in Sources */,
 				A4601DFF2AEA6C4A00923B53 /* OnboardingSecondView.swift in Sources */,
 				BEEF7EA42AE5C73B00E88D16 /* itemModel.swift in Sources */,
 				BE49BE812AE7BA1A00E95A17 /* SearchBar.swift in Sources */,
 				BEEF7E592ADE911300E88D16 /* AsobersApp.swift in Sources */,
+				BE49BEA32AEB216A00E95A17 /* DetailModelView.swift in Sources */,
 				BE49BE9B2AE8522400E95A17 /* ItemExtensions.swift in Sources */,
 				BE49BE862AE7BA5F00E95A17 /* PopOverTestView.swift in Sources */,
 				BE49BE972AE84F2200E95A17 /* CoreDataManager.swift in Sources */,
 				BE49BE7D2AE7B9F800E95A17 /* Constants.swift in Sources */,
+				BE49BEA52AEBBD8D00E95A17 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +397,7 @@
 			files = (
 				BEEF7E762ADE911400E88D16 /* AsobersUITestsLaunchTests.swift in Sources */,
 				BEEF7E742ADE911400E88D16 /* AsobersUITests.swift in Sources */,
+				BE49BEA02AEAA24B00E95A17 /* NewGLView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

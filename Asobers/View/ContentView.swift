@@ -16,45 +16,28 @@ struct SecondView: View {
 }
 
 struct ContentView: View {
-    @AppStorage("_isFirstLaunching") var isFirstLaunching: Bool = true
-    @StateObject private var vm: ContentViewModel
-    @State private var isPresented: Bool = false
+    @State private var newItemDataT: String = ""
+    
+    @AppStorage("_isFirstLaunching") var isFirstLaunching: Bool = false
+   
+    @State var isPresentedADD: Bool = false
     @State private var showingActionSheet = false
     
-    
+    @StateObject private var vm: ContentViewModel
     init(vm: ContentViewModel) {
         _vm = StateObject(wrappedValue: vm)
     }
     
     
     var body: some View {
-        
+      
         
         NavigationView {
+            
+            
             VStack {
                 
                 ItemListView(itemLists: vm.itemLists)
-                
-                Button("Add List") {
-                    isPresented = true
-                }.frame(maxWidth: .infinity, alignment: .trailing)
-                    .padding()
-                    .sheet(isPresented: $isPresented) {
-                        NewGLView { data,status,name, measurement, amount, reminderStatus, frequency, progress,goal in
-                            // save
-                            vm.saveNewList(newItemData : data,
-                                           newItemStatus:status,
-                                           newItemName: name,
-                                           newItemMeasurement: measurement,
-                                           newItemAmount : amount,
-                                           newItemRS : reminderStatus,
-                                           newItemFrequency : frequency
-                                           ,newItemProgress : progress
-                                           ,newItemGoal : goal)
-                        }
-                    }
-                
-                
                 
             }
             .navigationBarTitle("Today", displayMode: .inline)
@@ -78,24 +61,48 @@ struct ContentView: View {
                             title: Text("Add"),
                             buttons: [
                                 .default(Text("Goal")) {
-                                    // Action to perform when the user selects "Goal"
+                                    newItemDataT = "Goal"
+                                    isPresentedADD = true
+                                    
                                 },
                                 .default(Text("Limit")) {
-                                    // Action to perform when the user selects "Limit"
+                                    newItemDataT = "Limit"
+                                    isPresentedADD = true
+                                    
                                 },
                                 .cancel() {
                                     // Action to perform when the user cancels the Action Sheet
                                 }
                             ]
                         )
-                    } .fullScreenCover(isPresented: $isFirstLaunching) {
-                        OnboardingOneView(isFirstLaunching: $isFirstLaunching)
                     }
-            )}
+                    .fullScreenCover(isPresented: $isPresentedADD) {
+                        NewGLView {data,name, measurement, amount, reminderStatus, frequency, progress,goal,favoritColour,iconName in
+                            // save
+                            vm.saveNewList(newItemData : newItemDataT,
+                                           newItemName: name,
+                                           newItemMeasurement: measurement,
+                                           newItemAmount : amount,
+                                           newItemRS : reminderStatus,
+                                           newItemFrequency : frequency,
+                                           newItemProgress : progress,
+                                           newItemGoal : goal,
+                                           selectColor: favoritColour,
+                                           selectedIconName: iconName
+                                           
+                            )
+                        }
+                    }
+                    .fullScreenCover(isPresented: $isFirstLaunching) {
+                        OnboardingOneView(/*isFirstLaunching: $isFirstLaunching*/)
+                    }
+            ) 
+        }
         
         
         
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

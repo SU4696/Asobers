@@ -18,4 +18,16 @@ extension Item {
     func save() throws {
         try CoreDataManager.shared.context.save()
     }
+    func saveChanges() {
+        let context = CoreDataManager.shared.context
+        
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                print("Could not save changes to Core Data.", error.localizedDescription)
+            }
+        }
+    }
+    
 }

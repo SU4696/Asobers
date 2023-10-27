@@ -33,11 +33,10 @@ class ContentViewModel: NSObject, ObservableObject {
     }
  
     
-    func saveNewList(newItemData: String,newItemStatus: Bool,newItemName:String, newItemMeasurement:String, newItemAmount:Int64, newItemRS:Bool, newItemFrequency:String, newItemProgress:Int64,newItemGoal:Int64) {
+    func saveNewList(newItemData: String,newItemName:String, newItemMeasurement:String, newItemAmount:Int64, newItemRS:Bool, newItemFrequency:String, newItemProgress:Int64,newItemGoal:Int64, selectColor: String, selectedIconName:String) {
         
         let itemList = Item(context: context)
         itemList.data = newItemData
-        itemList.status=newItemStatus
         itemList.name = newItemName
         itemList.measurement = newItemMeasurement
         itemList.amount = newItemAmount
@@ -45,6 +44,8 @@ class ContentViewModel: NSObject, ObservableObject {
         itemList.frequency = newItemFrequency
         itemList.progress = newItemProgress
         itemList.goal = newItemGoal
+        itemList.favouriteColour = selectColor
+        itemList.iconName = selectedIconName
         
         do {
             try itemList.save()
@@ -53,6 +54,7 @@ class ContentViewModel: NSObject, ObservableObject {
         }
         
     }
+  
 
 }
 

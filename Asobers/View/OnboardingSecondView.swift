@@ -6,59 +6,85 @@
 //
 
 import SwiftUI
-
 struct OnboardingSecondView: View {
+    @State private var isPresented: Bool = false
     
-    @State private var singleSelection: UUID?
-    
+    var viewModel = itemDataModel()
     
     var body: some View {
-        Text("Let's Start Together!")
-            .bold()
-            .font(.largeTitle)
-            .foregroundStyle(.pink)
-            .padding(.top,60)
+        NavigationStack{
         
-        NavigationView {
-            List(selection: $singleSelection) {
-                Section(header:
-                            Text("Goal")
-                    .font(.system(size: 19, weight: .bold))
-                    .foregroundStyle(.black)
-                )
-                {
-                    Text("Water")
-                }
-                
-                Section(header:
-                            Text("Limits")
-                    .font(.system(size: 18, weight: .bold))
-                    .foregroundStyle(.black)
-                ) {
-                    Text("Coffee")
-                    Text("Tabacco")
-                }
-            }
-            
-        }
-        
-        Button(action: {
-            //going to next page
-        } ) {
-            Text ("Set")
+        VStack {
+            Text("Let's start together!")
                 .bold()
-                .padding(.horizontal, 150)
-                .padding(.vertical, 20)
-                .foregroundColor(.white)
-                .background(Color.pink)
-            //change the main color
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-                .shadow(radius: 10)
+                .font(.largeTitle)
+                .foregroundColor(.pink)
+                .padding(.top,60)
+          
+                List {
+                    
+                    Section("Goal"){
+                        ForEach(viewModel.defaultItems) {
+                            item in
+                            if item.data == "Goal"{
+                                NavigationLink{
+                                    DefaultGLView(defaultItems: item)
+                                } label: {
+                                    HStack {
+                                        Image(systemName: item.selectedIcon)
+                                            .imageScale(.medium)
+                                            .foregroundStyle(item.selectedColor)
+                                        Text(item.name)
+                                        
+                                    }
+                                }}
+                            
+                        }
+                    }.listRowBackground(Color.gray
+                        .brightness(0.4))
+                    
+                    Section("Limits"){
+                        ForEach(viewModel.defaultItems) {
+                            item in
+                            if item.data == "Goal"{
+                                NavigationLink{
+                                    DefaultGLView(defaultItems: item)
+                                } label: {
+                                    HStack {
+                                        Image(systemName: item.selectedIcon)
+                                            .imageScale(.medium)
+                                            .foregroundStyle(item.selectedColor)
+                                        Text(item.name)
+                                        
+                                    }
+                                }}
+                            
+                        }
+                    }.listRowBackground(Color.gray
+                        .brightness(0.4))
+                    
+                }.scrollContentBackground(.hidden) // HERE
+                    .background(.white)
+                
+          
             
-            
+            Button(action: {
+                isPresented = true
+                
+            }, label: {
+                Text("Set")
+                    .bold()
+                    .padding(.horizontal, 100)
+                    .padding(.vertical, 15)
+                    .foregroundColor(.white)
+                    .background(Color.pink)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .shadow(radius: 10)
+            })
             
         }
-    }
+        .padding()
+        }  }
 }
 
 #Preview {
