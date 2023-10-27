@@ -135,7 +135,7 @@ struct NewGLView: View {
                     Text("Cancel")
                 }),trailing: Button(action: {
                     onSave(newItemData,
-                           newItemName, newItemMeasurement, newItemAmount, newReminderStatus, "", 0, newItemGoal, selectedColor.hex,selectedIcon)
+                           newItemName, newItemMeasurement, newItemAmount, newReminderStatus, newItemFrequency, 0, newItemGoal, selectedColor.hex,selectedIcon)
                     dismiss()
                     
                 }) {

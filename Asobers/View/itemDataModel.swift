@@ -21,14 +21,15 @@ struct DefaultItem: Identifiable {
     var goal: Int64
     var selectedColor: Color
     var selectedIcon: String
+    
 }
 
 
 class itemDataModel  {
     var defaultItems: [DefaultItem] = [
-        DefaultItem(data: "Goal", name: "Water", measurement: "ml", amount: 100, reminderStatus: false, frequency: "Every 1 hour", progress: 0, goal: 1500, selectedColor: .pink, selectedIcon: "person.fill"),
-        DefaultItem(data: "Limit",  name: "Coffee", measurement: "Cup", amount: 1, reminderStatus: false, frequency: "Every 1 hour", progress: 0, goal: 4, selectedColor: .pink, selectedIcon: "person.fill"),
-        DefaultItem(data: "Limit", name: "Tobacco", measurement: "None", amount: 1, reminderStatus: false, frequency: "Every 1 hour", progress: 0, goal: 5, selectedColor: .pink, selectedIcon: "person.fill"),
+        DefaultItem(data: "Goal", name: "Water", measurement: "ml", amount: 100, reminderStatus: false, frequency: "Every 1 hour", progress: 0, goal: 1500, selectedColor: .blue, selectedIcon: "person.fill"),
+        DefaultItem(data: "Limit",  name: "Coffee", measurement: "Cup", amount: 1, reminderStatus: false, frequency: "Every 1 hour", progress: 0, goal: 4, selectedColor: .brown, selectedIcon: "person.fill"),
+        DefaultItem(data: "Limit", name: "Tobacco", measurement: "None", amount: 1, reminderStatus: false, frequency: "Every 1 hour", progress: 0, goal: 5, selectedColor: .gray, selectedIcon: "person.fill"),
        
     
     ]

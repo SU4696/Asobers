@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailModelView: View {
     @State private var refreshID = UUID()
     
+    
     let itemList: ItemListViewModel
     
     func update(itemList: Item, name: String? = nil, measurement: String? = nil, amount: Int64? = nil, reminderStatus: Bool? = nil, frequency: String? = nil, progress: Int64? = nil,goal: Int64? = nil) {
@@ -70,7 +71,8 @@ struct DetailModelView: View {
                     .foregroundColor(Color.colorFromHex(itemList.favouriteColour))
                     .padding(.bottom, 70)
                 
-                Text("\((itemList.progress/itemList.goal)*100)% ") //amount of every cup
+                
+            Text("\( (Double(itemList.progress)/Double(itemList.goal))*100, specifier: "%.f")%")
                     .padding(.bottom, 30)
                     .padding(.top, 10)
                 
