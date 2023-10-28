@@ -14,16 +14,17 @@ struct OnboardingOneView: View {
     
     var body: some View {
         VStack {
-            Text("Welcome to iRoutine")
+            Text("Welcome to Well O'Clock!")
                 .font(.largeTitle)
+                .multilineTextAlignment(.center)
                 .bold()
                 .foregroundColor(.pink)
                 .padding(.bottom, 50)
             
             VStack(alignment:.leading ,spacing: 10) {
-                BoxView(icon:"list.dash", titletext:"Set up your activity", description: "Activities are nice. After choosing them, you can keep track of your progress!")
-                BoxView(icon:"list.dash", titletext:"Goals!", description: "Goals will help you become healthy and live a happy life. Choose and do it!")
-                BoxView(icon:"list.dash", titletext:"Limits!", description: "Choose a bad activity and keep track of it to help yourself let it go step by step!")
+                BoxView(icon:"list.dash", titletext:"Choose your goal(s)!", description: "Cannot keep track of your good habits? Choose a goal (or more) and customise as you like!")
+                BoxView(icon:"list.dash", titletext:"Reduce your bad habit(s)!", description: "Struggling with your bad habits? Create your personal limit tracker and get rid of it, step by step!")
+                BoxView(icon:"list.dash", titletext:"Set up your activity!", description: "Once your goals and limits are created, you can keep track of your daily progress!")
             }
             
             
