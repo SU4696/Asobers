@@ -75,7 +75,8 @@
 		BE49BEA62AEFB48500E95A17 /* DefaultTobaccoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTobaccoView.swift; sourceTree = "<group>"; };
 		BE49BEA82AEFB49300E95A17 /* DefaultCoffeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCoffeeView.swift; sourceTree = "<group>"; };
 		BE49BEAA2AEFBB6700E95A17 /* UpdateItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateItemView.swift; sourceTree = "<group>"; };
-		BEEF7E552ADE911300E88D16 /* Asobers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asobers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE49BEAD2AEFD74400E95A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BEEF7E552ADE911300E88D16 /* Well O'Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Well O'Clock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF7E582ADE911300E88D16 /* AsobersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsobersApp.swift; sourceTree = "<group>"; };
 		BEEF7E5A2ADE911300E88D16 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BEEF7E5C2ADE911400E88D16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -156,7 +157,7 @@
 		BEEF7E562ADE911300E88D16 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BEEF7E552ADE911300E88D16 /* Asobers.app */,
+				BEEF7E552ADE911300E88D16 /* Well O'Clock.app */,
 				BEEF7E652ADE911400E88D16 /* AsobersTests.xctest */,
 				BEEF7E6F2ADE911400E88D16 /* AsobersUITests.xctest */,
 			);
@@ -166,6 +167,7 @@
 		BEEF7E572ADE911300E88D16 /* Asobers */ = {
 			isa = PBXGroup;
 			children = (
+				BE49BEAD2AEFD74400E95A17 /* Info.plist */,
 				BEEF7E582ADE911300E88D16 /* AsobersApp.swift */,
 				BE49BE982AE8520400E95A17 /* CoreData */,
 				BE49BE7B2AE7B9DC00E95A17 /* Utils */,
@@ -242,9 +244,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BEEF7E542ADE911300E88D16 /* Asobers */ = {
+		BEEF7E542ADE911300E88D16 /* Well O'Clock */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BEEF7E792ADE911400E88D16 /* Build configuration list for PBXNativeTarget "Asobers" */;
+			buildConfigurationList = BEEF7E792ADE911400E88D16 /* Build configuration list for PBXNativeTarget "Well O'Clock" */;
 			buildPhases = (
 				BEEF7E512ADE911300E88D16 /* Sources */,
 				BEEF7E522ADE911300E88D16 /* Frameworks */,
@@ -254,9 +256,9 @@
 			);
 			dependencies = (
 			);
-			name = Asobers;
+			name = "Well O'Clock";
 			productName = Asobers;
-			productReference = BEEF7E552ADE911300E88D16 /* Asobers.app */;
+			productReference = BEEF7E552ADE911300E88D16 /* Well O'Clock.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BEEF7E642ADE911400E88D16 /* AsobersTests */ = {
@@ -331,7 +333,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BEEF7E542ADE911300E88D16 /* Asobers */,
+				BEEF7E542ADE911300E88D16 /* Well O'Clock */,
 				BEEF7E642ADE911400E88D16 /* AsobersTests */,
 				BEEF7E6E2ADE911400E88D16 /* AsobersUITests */,
 			);
@@ -418,12 +420,12 @@
 /* Begin PBXTargetDependency section */
 		BEEF7E672ADE911400E88D16 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BEEF7E542ADE911300E88D16 /* Asobers */;
+			target = BEEF7E542ADE911300E88D16 /* Well O'Clock */;
 			targetProxy = BEEF7E662ADE911400E88D16 /* PBXContainerItemProxy */;
 		};
 		BEEF7E712ADE911400E88D16 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BEEF7E542ADE911300E88D16 /* Asobers */;
+			target = BEEF7E542ADE911300E88D16 /* Well O'Clock */;
 			targetProxy = BEEF7E702ADE911400E88D16 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -559,6 +561,7 @@
 				DEVELOPMENT_TEAM = ZPG82D37U3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Asobers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -588,6 +591,7 @@
 				DEVELOPMENT_TEAM = ZPG82D37U3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Asobers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -694,7 +698,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BEEF7E792ADE911400E88D16 /* Build configuration list for PBXNativeTarget "Asobers" */ = {
+		BEEF7E792ADE911400E88D16 /* Build configuration list for PBXNativeTarget "Well O'Clock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEEF7E7A2ADE911400E88D16 /* Debug */,

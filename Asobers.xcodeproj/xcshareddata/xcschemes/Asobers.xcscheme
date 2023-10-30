@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BEEF7E542ADE911300E88D16"
-               BuildableName = "Asobers.app"
-               BlueprintName = "Asobers"
+               BuildableName = "Well O&apos;Clock.app"
+               BlueprintName = "Well O&apos;Clock"
                ReferencedContainer = "container:Asobers.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -68,8 +68,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BEEF7E542ADE911300E88D16"
-            BuildableName = "Asobers.app"
-            BlueprintName = "Asobers"
+            BuildableName = "Well O&apos;Clock.app"
+            BlueprintName = "Well O&apos;Clock"
             ReferencedContainer = "container:Asobers.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -91,8 +91,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BEEF7E542ADE911300E88D16"
-            BuildableName = "Asobers.app"
-            BlueprintName = "Asobers"
+            BuildableName = "Well O&apos;Clock.app"
+            BlueprintName = "Well O&apos;Clock"
             ReferencedContainer = "container:Asobers.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
