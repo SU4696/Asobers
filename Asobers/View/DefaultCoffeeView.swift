@@ -1,21 +1,27 @@
-import Foundation
+//
+//  DefaultCoffeeView.swift
+//  Asobers
+//
+//  Created by Suyeon Cho on 30/10/23.
+//
+
 import SwiftUI
 
-struct NewGLView: View {
+struct DefaultCoffeeView: View {
     @Environment(\.dismiss) private var dismiss
     
     @State private var isColorPopoverPresented: Bool = false
     
-    @State var newItemData: String = ""
-    @State private var newItemName: String = ""
-    @State private var newItemMeasurement: String = "None"
+    @State var newItemData: String = "Limit"
+    @State private var newItemName: String = "Coffee"
+    @State private var newItemMeasurement: String = "Cup"
     @State private var newItemAmount: Int64 = 1
-    @State private var newItemGoal: Int64 = 10
+    @State private var newItemGoal: Int64 = 4
     @State private var newReminderStatus: Bool = false
     @State private var newItemFrequency: String = "Every 30 minutes"
-    @State private var selectedColor: Color = .pink
-    @State private var selectedIcon:String = "line.3.horizontal"
-  
+    @State private var selectedColor: Color = .brown
+    @State private var selectedIcon:String = "cup.and.saucer.fill"
+    
     
     var onSave: (String, String, String, Int64, Bool, String, Int64,Int64,String,String) -> Void
     
@@ -46,8 +52,8 @@ struct NewGLView: View {
                             .padding(30)
                         
                     }
-                   
                     
+                    Text(selectedIcon)
                     TextField("Name", text: $newItemName)
                         .font(.title)
                         .bold()
@@ -89,9 +95,9 @@ struct NewGLView: View {
                         .padding(.bottom,30)
                 }
                 .background().clipShape(RoundedRectangle(cornerRadius: 10.0,style: .continuous)).padding()
-               
                 
-               
+                
+                
                 
                 Form {
                     
@@ -152,11 +158,7 @@ struct NewGLView: View {
         }
     }
 }
-
 //
 //#Preview {
-//    NewGLView(onSave: <#(String, Bool, String, String, Int64, Bool, String, Int64, Int64) -> Void#>)
+//    DefaultCoffeeView(, onSave: <#(String, String, String, Int64, Bool, String, Int64, Int64, String, String) -> Void#>)
 //}
-
-
-

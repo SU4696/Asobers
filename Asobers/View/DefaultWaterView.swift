@@ -1,21 +1,27 @@
-import Foundation
+//
+//  DefaultGLView.swift
+//  Asobers
+//
+//  Created by Suyeon Cho on 26/10/23.
+//
+
 import SwiftUI
 
-struct NewGLView: View {
+struct DefaultWaterView: View {
     @Environment(\.dismiss) private var dismiss
     
     @State private var isColorPopoverPresented: Bool = false
     
-    @State var newItemData: String = ""
-    @State private var newItemName: String = ""
-    @State private var newItemMeasurement: String = "None"
-    @State private var newItemAmount: Int64 = 1
-    @State private var newItemGoal: Int64 = 10
+    @State var newItemData: String = "Goal"
+    @State private var newItemName: String = "Water"
+    @State private var newItemMeasurement: String = "ml"
+    @State private var newItemAmount: Int64 = 100
+    @State private var newItemGoal: Int64 = 1500
     @State private var newReminderStatus: Bool = false
     @State private var newItemFrequency: String = "Every 30 minutes"
-    @State private var selectedColor: Color = .pink
-    @State private var selectedIcon:String = "line.3.horizontal"
-  
+    @State private var selectedColor: Color = .blue
+    @State private var selectedIcon:String = "drop.fill"
+    
     
     var onSave: (String, String, String, Int64, Bool, String, Int64,Int64,String,String) -> Void
     
@@ -46,7 +52,7 @@ struct NewGLView: View {
                             .padding(30)
                         
                     }
-                   
+                    
                     
                     TextField("Name", text: $newItemName)
                         .font(.title)
@@ -89,9 +95,9 @@ struct NewGLView: View {
                         .padding(.bottom,30)
                 }
                 .background().clipShape(RoundedRectangle(cornerRadius: 10.0,style: .continuous)).padding()
-               
                 
-               
+                
+                
                 
                 Form {
                     
@@ -107,6 +113,7 @@ struct NewGLView: View {
                             newItemAmount = 1
                         }
                     }
+                    
                     
                     HStack {
                         Text("Amount")
@@ -153,10 +160,11 @@ struct NewGLView: View {
     }
 }
 
-//
-//#Preview {
-//    NewGLView(onSave: <#(String, Bool, String, String, Int64, Bool, String, Int64, Int64) -> Void#>)
-//}
+
+/* #Preview {
+ DefaultGLView(defaultItems: DefaultItem(data: "Goal", name: "Water", measurement: "ml", amount: 100, reminderStatus: false, frequency: "Every 1 hour", progress: 0, goal: 1500, selectedColor: .black,selectedIcon: "person.fill"))
+ }*/
+
 
 
 

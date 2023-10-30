@@ -18,16 +18,14 @@ struct SecondView: View {
 struct ContentView: View {
     @State private var newItemDataT: String = ""
     
-    @AppStorage("_isFirstLaunching") var isFirstLaunching: Bool = false
+    @AppStorage("_isFirstLaunching") var isFirstLaunching: Bool = true
    
     @State var isPresentedADD: Bool = false
     @State private var showingActionSheet = false
-    
     @StateObject private var vm: ContentViewModel
     init(vm: ContentViewModel) {
         _vm = StateObject(wrappedValue: vm)
     }
-    
     
     var body: some View {
       
@@ -75,6 +73,7 @@ struct ContentView: View {
                                 }
                             ]
                         )
+                        
                     }
                     .fullScreenCover(isPresented: $isPresentedADD) {
                         NewGLView {data,name, measurement, amount, reminderStatus, frequency, progress,goal,favoritColour,iconName in
@@ -94,7 +93,7 @@ struct ContentView: View {
                         }
                     }
                     .fullScreenCover(isPresented: $isFirstLaunching) {
-                        OnboardingOneView(/*isFirstLaunching: $isFirstLaunching*/)
+                        OnboardingOneView(isFirstLaunching: $isFirstLaunching)
                     }
             ) 
         }

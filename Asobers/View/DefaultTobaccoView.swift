@@ -1,21 +1,27 @@
-import Foundation
+//
+//  DefaultTobaccoView.swift
+//  Asobers
+//
+//  Created by Suyeon Cho on 30/10/23.
+//
+
 import SwiftUI
 
-struct NewGLView: View {
+struct DefaultTobaccoView: View {
     @Environment(\.dismiss) private var dismiss
     
     @State private var isColorPopoverPresented: Bool = false
     
-    @State var newItemData: String = ""
-    @State private var newItemName: String = ""
+    @State var newItemData: String = "Limit"
+    @State private var newItemName: String = "Tobacco"
     @State private var newItemMeasurement: String = "None"
     @State private var newItemAmount: Int64 = 1
-    @State private var newItemGoal: Int64 = 10
+    @State private var newItemGoal: Int64 = 5
     @State private var newReminderStatus: Bool = false
     @State private var newItemFrequency: String = "Every 30 minutes"
-    @State private var selectedColor: Color = .pink
-    @State private var selectedIcon:String = "line.3.horizontal"
-  
+    @State private var selectedColor: Color = .gray
+    @State private var selectedIcon:String = "exclamationmark.shield.fill"
+    
     
     var onSave: (String, String, String, Int64, Bool, String, Int64,Int64,String,String) -> Void
     
@@ -46,7 +52,7 @@ struct NewGLView: View {
                             .padding(30)
                         
                     }
-                   
+                    
                     
                     TextField("Name", text: $newItemName)
                         .font(.title)
@@ -89,24 +95,17 @@ struct NewGLView: View {
                         .padding(.bottom,30)
                 }
                 .background().clipShape(RoundedRectangle(cornerRadius: 10.0,style: .continuous)).padding()
-               
                 
-               
+                
+                
                 
                 Form {
                     
                     Picker("Measurement", selection: $newItemMeasurement) {
                         Text("None").tag("None")
-                        Text("ml").tag("ml")
-                        Text("Cup").tag("Cup")
+                      
                     }
-                    .onChange(of: newItemMeasurement) { newValue in
-                        if newValue == "ml" {
-                            newItemAmount = 100
-                        } else if newValue == "Cup" {
-                            newItemAmount = 1
-                        }
-                    }
+                    
                     
                     HStack {
                         Text("Amount")
@@ -137,6 +136,7 @@ struct NewGLView: View {
                         }
                     }
                 }
+                
                 .navigationBarItems(leading: Button(action: {dismiss()}, label: {
                     Text("Cancel")
                 }),trailing: Button(action: {
@@ -152,11 +152,7 @@ struct NewGLView: View {
         }
     }
 }
-
 //
 //#Preview {
-//    NewGLView(onSave: <#(String, Bool, String, String, Int64, Bool, String, Int64, Int64) -> Void#>)
+//    DefaultTobaccoView()
 //}
-
-
-

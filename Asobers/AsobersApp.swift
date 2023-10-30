@@ -11,10 +11,11 @@ import SwiftUI
 struct AsobersApp: App {
     @Environment(\.colorScheme) var colorScheme
 
+    
     var body: some Scene {
         WindowGroup {
-//            ContentView(vm:ContentViewModel())
-           OnboardingOneView()
+            ContentView(vm:ContentViewModel())
+//            OnboardingOneView(vm: ContentViewModel())
                 
         }
     }

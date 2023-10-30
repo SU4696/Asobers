@@ -20,10 +20,13 @@
 		BE49BE972AE84F2200E95A17 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BE962AE84F2200E95A17 /* CoreDataManager.swift */; };
 		BE49BE9B2AE8522400E95A17 /* ItemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BE9A2AE8522400E95A17 /* ItemExtensions.swift */; };
 		BE49BE9D2AE860CB00E95A17 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BE9C2AE860CB00E95A17 /* ItemListView.swift */; };
-		BE49BE9F2AEA905C00E95A17 /* DefaultGLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BE9E2AEA905C00E95A17 /* DefaultGLView.swift */; };
+		BE49BE9F2AEA905C00E95A17 /* DefaultWaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BE9E2AEA905C00E95A17 /* DefaultWaterView.swift */; };
 		BE49BEA02AEAA24B00E95A17 /* NewGLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BE872AE7CF4D00E95A17 /* NewGLView.swift */; };
 		BE49BEA32AEB216A00E95A17 /* DetailModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BEA22AEB216A00E95A17 /* DetailModelView.swift */; };
 		BE49BEA52AEBBD8D00E95A17 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BEA42AEBBD8D00E95A17 /* ColorExtension.swift */; };
+		BE49BEA72AEFB48500E95A17 /* DefaultTobaccoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BEA62AEFB48500E95A17 /* DefaultTobaccoView.swift */; };
+		BE49BEA92AEFB49300E95A17 /* DefaultCoffeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BEA82AEFB49300E95A17 /* DefaultCoffeeView.swift */; };
+		BE49BEAB2AEFBB6700E95A17 /* UpdateItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49BEAA2AEFBB6700E95A17 /* UpdateItemView.swift */; };
 		BEEF7E592ADE911300E88D16 /* AsobersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF7E582ADE911300E88D16 /* AsobersApp.swift */; };
 		BEEF7E5B2ADE911300E88D16 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF7E5A2ADE911300E88D16 /* ContentView.swift */; };
 		BEEF7E5D2ADE911400E88D16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEEF7E5C2ADE911400E88D16 /* Assets.xcassets */; };
@@ -66,9 +69,12 @@
 		BE49BE962AE84F2200E95A17 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BE49BE9A2AE8522400E95A17 /* ItemExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemExtensions.swift; sourceTree = "<group>"; };
 		BE49BE9C2AE860CB00E95A17 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
-		BE49BE9E2AEA905C00E95A17 /* DefaultGLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultGLView.swift; sourceTree = "<group>"; };
+		BE49BE9E2AEA905C00E95A17 /* DefaultWaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultWaterView.swift; sourceTree = "<group>"; };
 		BE49BEA22AEB216A00E95A17 /* DetailModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModelView.swift; sourceTree = "<group>"; };
 		BE49BEA42AEBBD8D00E95A17 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		BE49BEA62AEFB48500E95A17 /* DefaultTobaccoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTobaccoView.swift; sourceTree = "<group>"; };
+		BE49BEA82AEFB49300E95A17 /* DefaultCoffeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCoffeeView.swift; sourceTree = "<group>"; };
+		BE49BEAA2AEFBB6700E95A17 /* UpdateItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateItemView.swift; sourceTree = "<group>"; };
 		BEEF7E552ADE911300E88D16 /* Asobers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asobers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF7E582ADE911300E88D16 /* AsobersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsobersApp.swift; sourceTree = "<group>"; };
 		BEEF7E5A2ADE911300E88D16 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -207,8 +213,11 @@
 				BE49BE872AE7CF4D00E95A17 /* NewGLView.swift */,
 				BE49BE9C2AE860CB00E95A17 /* ItemListView.swift */,
 				A4601DFE2AEA6C4A00923B53 /* OnboardingSecondView.swift */,
-				BE49BE9E2AEA905C00E95A17 /* DefaultGLView.swift */,
+				BE49BE9E2AEA905C00E95A17 /* DefaultWaterView.swift */,
+				BE49BEA82AEFB49300E95A17 /* DefaultCoffeeView.swift */,
+				BE49BEA62AEFB48500E95A17 /* DefaultTobaccoView.swift */,
 				BE49BEA22AEB216A00E95A17 /* DetailModelView.swift */,
+				BE49BEAA2AEFBB6700E95A17 /* UpdateItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -365,14 +374,17 @@
 				60DDC87C2AE67B4900D26C3F /* OnboardingOneView.swift in Sources */,
 				BE49BE9D2AE860CB00E95A17 /* ItemListView.swift in Sources */,
 				BEEF7E5B2ADE911300E88D16 /* ContentView.swift in Sources */,
+				BE49BEA72AEFB48500E95A17 /* DefaultTobaccoView.swift in Sources */,
 				BE49BE7F2AE7BA1000E95A17 /* SymbolIcon.swift in Sources */,
 				BEEF7EA22AE5C5B700E88D16 /* itemDataModel.swift in Sources */,
-				BE49BE9F2AEA905C00E95A17 /* DefaultGLView.swift in Sources */,
+				BE49BE9F2AEA905C00E95A17 /* DefaultWaterView.swift in Sources */,
 				BE49BE882AE7CF4D00E95A17 /* NewGLView.swift in Sources */,
+				BE49BEAB2AEFBB6700E95A17 /* UpdateItemView.swift in Sources */,
 				BE49BE842AE7BA4600E95A17 /* ColorIconSelectorModelView.swift in Sources */,
 				A4601DFF2AEA6C4A00923B53 /* OnboardingSecondView.swift in Sources */,
 				BEEF7EA42AE5C73B00E88D16 /* itemModel.swift in Sources */,
 				BE49BE812AE7BA1A00E95A17 /* SearchBar.swift in Sources */,
+				BE49BEA92AEFB49300E95A17 /* DefaultCoffeeView.swift in Sources */,
 				BEEF7E592ADE911300E88D16 /* AsobersApp.swift in Sources */,
 				BE49BEA32AEB216A00E95A17 /* DetailModelView.swift in Sources */,
 				BE49BE9B2AE8522400E95A17 /* ItemExtensions.swift in Sources */,

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ItemListView: View {
     @State private var refreshID = UUID()
-    
+    @State private var isPresentingUpdateItemView = false
     let itemLists: [ItemListViewModel]
     
     func update(itemList: Item, name: String? = nil, measurement: String? = nil, amount: Int64? = nil, reminderStatus: Bool? = nil, frequency: String? = nil, progress: Int64? = nil,goal: Int64? = nil) {
@@ -65,14 +65,22 @@ struct ItemListView: View {
                 .foregroundColor(Color.black)
                     
             ) {
+                
+                
                 ForEach(itemLists) { itemList in
                     if itemList.data == "Goal" {
                         HStack {
                         NavigationLink {
                             DetailModelView(itemList: itemList)
-                                .navigationBarItems(trailing: Button(action: {}, label: {
+                                .navigationBarItems(trailing:Button(action: {
+                                    // Present the UpdateItemView
+                                    isPresentingUpdateItemView.toggle()
+                                }) {
                                     Text("Edit")
-                                }))
+                                }
+                                .sheet(isPresented: $isPresentingUpdateItemView) {
+                                    UpdateItemView(itemList: itemList)
+                                })
                         } label: {
                             HStack {
                                 Image(systemName: itemList.iconName)
@@ -118,9 +126,15 @@ struct ItemListView: View {
                         HStack {
                         NavigationLink {
                             DetailModelView(itemList: itemList)
-                                .navigationBarItems(trailing: Button(action: {}, label: {
+                                .navigationBarItems(trailing:Button(action: {
+                                    // Present the UpdateItemView
+                                    isPresentingUpdateItemView.toggle()
+                                }) {
                                     Text("Edit")
-                                }))
+                                }
+                                .sheet(isPresented: $isPresentingUpdateItemView) {
+                                    UpdateItemView(itemList: itemList)
+                                })
                         } label: {
                             HStack {
                                 Image(systemName: itemList.iconName)
