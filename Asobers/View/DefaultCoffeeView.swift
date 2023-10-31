@@ -53,7 +53,6 @@ struct DefaultCoffeeView: View {
                         
                     }
                     
-                    Text(selectedIcon)
                     TextField("Name", text: $newItemName)
                         .font(.title)
                         .bold()
