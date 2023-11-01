@@ -62,7 +62,7 @@ struct ItemListView: View {
             Section(header:
                         Text("Goal")
                 .fontWeight(.bold)
-                .foregroundColor(Color.black)
+
                     
             ) {
                 

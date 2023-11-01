@@ -15,7 +15,9 @@ struct SecondView: View {
     }
 }
 
+
 struct ContentView: View {
+    
     @State private var newItemDataT: String = ""
     
     @AppStorage("_isFirstLaunching") var isFirstLaunching: Bool = true
@@ -25,6 +27,7 @@ struct ContentView: View {
     @StateObject private var vm: ContentViewModel
     init(vm: ContentViewModel) {
         _vm = StateObject(wrappedValue: vm)
+        UIView.appearance().tintColor = UIColor(named: "AccentColor")
     }
     
     var body: some View {
@@ -72,6 +75,7 @@ struct ContentView: View {
                                     // Action to perform when the user cancels the Action Sheet
                                 }
                             ]
+                               
                         )
                         
                     }

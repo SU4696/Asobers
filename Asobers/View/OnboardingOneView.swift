@@ -27,7 +27,7 @@ struct OnboardingOneView: View {
             VStack(alignment:.leading ,spacing: 10) {
                 BoxView(icon:"flag.checkered.2.crossed", titletext:"Choose your goal(s)!", description: "Cannot keep track of your good habits alone? Set a goal (or more) and customise as you like!")
                 BoxView(icon:"exclamationmark.triangle.fill", titletext:"Reduce your bad habit(s)!", description: "Struggling with your bad habits? Create your personal limit tracker and get rid of them, step by step!")
-                BoxView(icon:"chart.bar.xaxis.ascending", titletext:"Set up your activity!", description: "Once your goals and limits are created, you can keep track of your daily progress!")
+                BoxView(icon:"chart.bar", titletext:"Set up your activity!", description: "Once your goals and limits are created, you can keep track of your daily progress!")
             }
             
             
