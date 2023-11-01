@@ -57,8 +57,8 @@ struct OnboardingSecondView: View {
                                 }}
                             
                         }
-                    }.listRowBackground(Color.gray
-                        .brightness(0.4))
+                    }.listRowBackground(Color(.systemGray6)
+                    )
                     
                     Section("Limits"){
                         ForEach(viewModel.defaultItems) {
@@ -121,11 +121,12 @@ struct OnboardingSecondView: View {
                             }
                             
                         }
-                    }.listRowBackground(Color.gray
-                        .brightness(0.4))
+                    }
+                    .listRowBackground(Color(.systemGray6)
+                    )
                     
                 }.scrollContentBackground(.hidden) // HERE
-                    .background(.white)
+               
                 
                 
                 
