@@ -26,7 +26,7 @@ struct OnboardingSecondView: View {
                 
                 List {
                     
-                    Section("Goal"){
+                    Section("Goals"){
                         ForEach(viewModel.defaultItems) {
                             item in
                             if item.name == "Water"{

@@ -60,7 +60,7 @@ struct ItemListView: View {
         
         List {
             Section(header:
-                        Text("Goal")
+                        Text("Goals")
                 .fontWeight(.bold)
 
                     
