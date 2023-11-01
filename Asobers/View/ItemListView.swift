@@ -119,7 +119,7 @@ struct ItemListView: View {
             Section(header:
                         Text("Limits")
                 .fontWeight(.bold)
-                .foregroundColor(Color.black)
+               
             ) {
                 ForEach(itemLists) { itemList in
                     if itemList.data == "Limit" {
